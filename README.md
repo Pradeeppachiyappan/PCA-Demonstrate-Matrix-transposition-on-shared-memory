@@ -36,7 +36,7 @@ kernels and grid (1,1) block (16,16).
 13. Compare the performance of the two methods.
 
 ## PROGRAM:
-checkSmemRectangle.cu:
+### checkSmemRectangle.cu:
 ```
 #include "common.h"
 #include <cuda_runtime.h>
