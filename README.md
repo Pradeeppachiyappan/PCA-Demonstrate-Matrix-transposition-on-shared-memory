@@ -8,32 +8,32 @@ Rectangular Shared Memory Kernels with grid (1,1) block (16,16).
 
 ## PROCEDURE:
 
- Allocate memory on the GPU for the input matrix and output matrix.
+1. Allocate memory on the GPU for the input matrix and output matrix.
 
- Copy the input matrix from the host to the GPU memory.
+2. Copy the input matrix from the host to the GPU memory.
 
- Define the kernel function for matrix transposition using shared memory.
+3. Define the kernel function for matrix transposition using shared memory.
 
- Allocate shared memory on the GPU for the input and output matrices.
+4. Allocate shared memory on the GPU for the input and output matrices.
 
- Load a tile of the input matrix into shared memory.
+5. Load a tile of the input matrix into shared memory.
 
- Use synchronization to ensure all threads have finished loading the tile into shared memory.
+6. Use synchronization to ensure all threads have finished loading the tile into shared memory.
 
- Transpose the tile in shared memory.
+7. Transpose the tile in shared memory.
 
- Use synchronization to ensure all threads have finished transposing the tile.
+8.  Use synchronization to ensure all threads have finished transposing the tile.
 
- Write the transposed tile back to global memory.
+9.  Write the transposed tile back to global memory.
 
- Repeat steps 5-9 until the entire input matrix has been transposed.
+10. Repeat steps 5-9 until the entire input matrix has been transposed.
 
- Copy the transposed matrix from the GPU memory to the host.
+11. Copy the transposed matrix from the GPU memory to the host.
 
- Measure the time taken for the matrix transposition using rectangular shared memory
+12. Measure the time taken for the matrix transposition using rectangular shared memory
 kernels and grid (1,1) block (16,16).
 
- Compare the performance of the two methods.
+13. Compare the performance of the two methods.
 
 ## PROGRAM:
 checkSmemRectangle.cu:
